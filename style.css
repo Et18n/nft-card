@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root {
+  /* ### Primary */
+
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* ### Neutral */
+
+  --Very-dark-blue1: hsl(217, 54%, 11%);
+  --Very-dark-blue2: hsl(216, 50%, 16%);
+  --Very-dark-blue3: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Very-dark-blue1);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  max-width: 350px;
+  max-height: 600px;
+  background-color: var(--Very-dark-blue2);
+  padding: 20px 20px;
+  font-family: "outfit", sans-serif;
+  border-radius: 10px;
+  margin: 1em;
+}
+.main-img{
+  position: relative;
+
+}
+.main-img:hover .overlay{
+  display: block;
+}
+.main-img img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+
+}
+.overlay{
+  position: absolute;
+  left:0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color:hsla(178, 100%, 50%, 0.5) ;
+  display: flex;
+  border-radius: 10px;
+  display: none;
+}
+.overlay img{
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform:translateX(-50%) translateY(-50%);
+}
+.title-nft {
+  font-size: 20px;
+  color: var(--White);
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.title-nft:hover{
+  color: var(--Cyan);
+}
+p {
+  color: var(--Soft-blue);
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid 1px hsl(215, 32%, 27%);
+}
+
+.eth {
+  color: var(--Cyan);
+  display: flex;
+  max-height: 20px;
+}
+.eth img {
+  padding-right: 8px;
+}
+.time {
+  color: var(--Soft-blue);
+  display: flex;
+  max-height: 20px;
+}
+.time img {
+  padding-right: 8px;
+}
+.credit {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var(--Soft-blue);
+  display: flex;
+  align-items: center;
+}
+.credit .name {
+  color: var(--White);
+  padding-left: 5px;
+}
+.credit .name:hover{
+  color: var(--Cyan);
+}
+.credit img {
+  object-fit: cover;
+  width: 40px;
+  border: solid 2px white;
+  border-radius: 50px;
+  margin-right: 20px;
+}
